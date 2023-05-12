@@ -1,0 +1,155 @@
+:root {
+    --main-bg-color: rgb(209, 222, 226);
+    --table-td-hover-color: rgb(161, 166, 166);
+}
+
+*{
+    margin : 0px;
+    padding : 0px;
+}
+
+
+
+/* menu de navigation */
+nav{
+    width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0px;
+    background-color: var(--main-bg-color);
+}
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    float : left;
+    width : 20%;
+    text-align : center;
+}
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+
+.containeur-principal{
+    width:95%;
+    margin: auto;
+}
+
+
+.bor{
+    border: 1px solid black;
+    padding-bottom: 20px;
+}
+.bor img{
+    max-width:100%;
+}
+
+.tableau_1{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+    font-size: 70%;
+}
+
+.tableau_1 tbody tr:nth-child(odd) {
+    background-color: var(--main-bg-color);
+  }
+  
+.tableau_1 tbody tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+.tableau_1 thead th{
+  padding: 2px;
+  text-align: right;
+  border: 1px inset black;
+}
+  
+.tableau_1 tbody td{
+  padding: 2px;
+  text-align: right;
+  border:0.1px solid var(--table-td-hover-color);
+}
+
+.tableau_1 thead th:hover{
+  background-color: var(--table-td-hover-color)
+}
+
+.tableau_1 tbody td:hover{
+  background-color: var(--table-td-hover-color)
+}
+
+.tab {
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom:10px;
+  }
+
+
+footer{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .cum_sum_button{
+      background-color: #d3d3d3;
+      border: 1px solid transparent;
+      color: #04AA6D;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      /* display: inline-block; */
+  }
+  
+  .cum_sum_button:hover{
+    border: 1px solid #04AA6D;
+  }
+  

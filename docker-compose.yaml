@@ -1,0 +1,27 @@
+version: '3.6'
+
+services:
+  bdd_meteo:
+    container_name: "bdd_cumul_meteo"
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5542:5432'
+    volumes: 
+      - ./postgreb:/var/lib/postgresql/data
+
+
+  serveur:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cumul_meteo
+    tty: true
+    ports:
+      - 8123:8123
+    volumes:
+      - ./:/app
+    command: gunicorn -b 0.0.0.0:8123 wsgi:app  --timeout 120 --workers=2 --threads=1 --worker-connections=10
+  

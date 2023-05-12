@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    {% block js %}{% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href='/'> - </a></li>
+        <li><a href='/'> - </a></li>
+        <li><a href='/'>météo</a></li>
+        <li><a href='/'> - </a></li>
+        <li><a href='/'> - </a></li>
+    </ul>
+</nav>
+
+<div class="containeur-principal">
+    {% block content %}{% endblock %}
+</div> <!-- fin containeur-principal -->
+
+<footer>&copy; no footer yet</footer>
+
+</body>
+</html>
